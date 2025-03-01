@@ -1,0 +1,10 @@
+C:\Users\Maria\source\repos\Pro4BDSanitario\bin\Debug\Pro4BDSanitario.dacpac
+C:\Users\Maria\source\repos\Pro4BDSanitario\bin\Debug\Pro4BDSanitario.dll
+C:\Users\Maria\source\repos\Pro4BDSanitario\bin\Debug\Pro4BDSanitario.pdb
+C:\Users\Maria\source\repos\Pro4BDSanitario\obj\Debug\Pro4BDSanitario.sqlproj.AssemblyReference.cache
+C:\Users\Maria\source\repos\Pro4BDSanitario\obj\Debug\Model.xml
+C:\Users\Maria\source\repos\Pro4BDSanitario\obj\Debug\refactor.xml
+C:\Users\Maria\source\repos\Pro4BDSanitario\obj\Debug\postdeploy.sql
+C:\Users\Maria\source\repos\Pro4BDSanitario\obj\Debug\predeploy.sql
+C:\Users\Maria\source\repos\Pro4BDSanitario\obj\Debug\Pro4BDSanitario.dll
+C:\Users\Maria\source\repos\Pro4BDSanitario\obj\Debug\Pro4BDSanitario.pdb
