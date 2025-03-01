@@ -10,3 +10,9 @@ C:\proyecto\ProyHospital\bin\Debug\ProyHospital.pdb
 C:\proyecto\ProyHospital\obj\Debug\ProyHospital.sqlproj.AssemblyReference.cache
 C:\proyecto\ProyHospital\obj\Debug\ProyHospital.dll
 C:\proyecto\ProyHospital\obj\Debug\ProyHospital.pdb
+C:\ProyMarlen\ProyHospital\bin\Debug\ProyHospital.dacpac
+C:\ProyMarlen\ProyHospital\bin\Debug\ProyHospital.dll
+C:\ProyMarlen\ProyHospital\bin\Debug\ProyHospital.pdb
+C:\ProyMarlen\ProyHospital\obj\Debug\ProyHospital.sqlproj.AssemblyReference.cache
+C:\ProyMarlen\ProyHospital\obj\Debug\ProyHospital.dll
+C:\ProyMarlen\ProyHospital\obj\Debug\ProyHospital.pdb
