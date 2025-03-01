@@ -61,5 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Schema\Tables\Hospital.sql" />
+    <Build Include="Schema\Tables\Servicio.sql" />
   </ItemGroup>
 </Project>
