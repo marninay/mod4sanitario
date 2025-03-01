@@ -4,3 +4,9 @@ C:\Users\Maria\source\repos\ProyHospital\bin\Debug\ProyHospital.pdb
 C:\Users\Maria\source\repos\ProyHospital\obj\Debug\ProyHospital.sqlproj.AssemblyReference.cache
 C:\Users\Maria\source\repos\ProyHospital\obj\Debug\ProyHospital.dll
 C:\Users\Maria\source\repos\ProyHospital\obj\Debug\ProyHospital.pdb
+C:\proyecto\ProyHospital\bin\Debug\ProyHospital.dacpac
+C:\proyecto\ProyHospital\bin\Debug\ProyHospital.dll
+C:\proyecto\ProyHospital\bin\Debug\ProyHospital.pdb
+C:\proyecto\ProyHospital\obj\Debug\ProyHospital.sqlproj.AssemblyReference.cache
+C:\proyecto\ProyHospital\obj\Debug\ProyHospital.dll
+C:\proyecto\ProyHospital\obj\Debug\ProyHospital.pdb
