@@ -1,0 +1,6 @@
+C:\Users\Maria\source\repos\ProyHospital\bin\Debug\ProyHospital.dacpac
+C:\Users\Maria\source\repos\ProyHospital\bin\Debug\ProyHospital.dll
+C:\Users\Maria\source\repos\ProyHospital\bin\Debug\ProyHospital.pdb
+C:\Users\Maria\source\repos\ProyHospital\obj\Debug\ProyHospital.sqlproj.AssemblyReference.cache
+C:\Users\Maria\source\repos\ProyHospital\obj\Debug\ProyHospital.dll
+C:\Users\Maria\source\repos\ProyHospital\obj\Debug\ProyHospital.pdb
