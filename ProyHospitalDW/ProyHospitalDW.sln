@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ProyHospitalDW", "ProyHospitalDW.sqlproj", "{A3BA3A92-8330-4D71-AD73-F92A7B3522A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3BA3A92-8330-4D71-AD73-F92A7B3522A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3BA3A92-8330-4D71-AD73-F92A7B3522A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3BA3A92-8330-4D71-AD73-F92A7B3522A5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A3BA3A92-8330-4D71-AD73-F92A7B3522A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3BA3A92-8330-4D71-AD73-F92A7B3522A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3BA3A92-8330-4D71-AD73-F92A7B3522A5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {547B1871-8356-425F-82BB-956F9B550882}
+	EndGlobalSection
+EndGlobal
