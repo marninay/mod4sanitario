@@ -62,5 +62,7 @@
   <ItemGroup>
     <Build Include="Schema\Tables\Dim_Paciente.sql" />
     <Build Include="Schema\Tables\Dim_Hospital.sql" />
+    <Build Include="Schema\Tables\Dim_Tiempo.sql" />
+    <Build Include="Schema\Tables\Dim_Servicio.sql" />
   </ItemGroup>
 </Project>
