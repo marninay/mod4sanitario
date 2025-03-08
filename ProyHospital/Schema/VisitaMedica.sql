@@ -1,4 +1,4 @@
-CREATE TABLE VisitaMedica (
+﻿CREATE TABLE VisitaMedica (
     idVisita INT PRIMARY KEY,
     fechahora DATETIME NOT NULL,
     codHospital INT,
@@ -12,3 +12,4 @@ CREATE TABLE VisitaMedica (
     FOREIGN KEY (DNIMedico) REFERENCES Medico(DNI),
     FOREIGN KEY (codHist) REFERENCES HistoriaClinica(codHist)
 );
+

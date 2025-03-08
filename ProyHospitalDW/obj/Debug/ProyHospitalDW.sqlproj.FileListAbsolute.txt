@@ -16,3 +16,13 @@ C:\proyecto\ProyHospitalDW\bin\Debug\ProyHospitalDW.pdb
 C:\proyecto\ProyHospitalDW\obj\Debug\ProyHospitalDW.sqlproj.AssemblyReference.cache
 C:\proyecto\ProyHospitalDW\obj\Debug\ProyHospitalDW.dll
 C:\proyecto\ProyHospitalDW\obj\Debug\ProyHospitalDW.pdb
+C:\proyecto\mod4sanitario\ProyHospitalDW\bin\Debug\ProyHospitalDW.dacpac
+C:\proyecto\mod4sanitario\ProyHospitalDW\bin\Debug\ProyHospitalDW.dll
+C:\proyecto\mod4sanitario\ProyHospitalDW\bin\Debug\ProyHospitalDW.pdb
+C:\proyecto\mod4sanitario\ProyHospitalDW\obj\Debug\ProyHospitalDW.sqlproj.AssemblyReference.cache
+C:\proyecto\mod4sanitario\ProyHospitalDW\obj\Debug\Model.xml
+C:\proyecto\mod4sanitario\ProyHospitalDW\obj\Debug\refactor.xml
+C:\proyecto\mod4sanitario\ProyHospitalDW\obj\Debug\postdeploy.sql
+C:\proyecto\mod4sanitario\ProyHospitalDW\obj\Debug\predeploy.sql
+C:\proyecto\mod4sanitario\ProyHospitalDW\obj\Debug\ProyHospitalDW.dll
+C:\proyecto\mod4sanitario\ProyHospitalDW\obj\Debug\ProyHospitalDW.pdb

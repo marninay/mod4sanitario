@@ -16,3 +16,9 @@ C:\ProyMarlen\ProyHospital\bin\Debug\ProyHospital.pdb
 C:\ProyMarlen\ProyHospital\obj\Debug\ProyHospital.sqlproj.AssemblyReference.cache
 C:\ProyMarlen\ProyHospital\obj\Debug\ProyHospital.dll
 C:\ProyMarlen\ProyHospital\obj\Debug\ProyHospital.pdb
+C:\proyecto\mod4sanitario\ProyHospital\bin\Debug\ProyHospital.dacpac
+C:\proyecto\mod4sanitario\ProyHospital\bin\Debug\ProyHospital.dll
+C:\proyecto\mod4sanitario\ProyHospital\bin\Debug\ProyHospital.pdb
+C:\proyecto\mod4sanitario\ProyHospital\obj\Debug\ProyHospital.sqlproj.AssemblyReference.cache
+C:\proyecto\mod4sanitario\ProyHospital\obj\Debug\ProyHospital.dll
+C:\proyecto\mod4sanitario\ProyHospital\obj\Debug\ProyHospital.pdb

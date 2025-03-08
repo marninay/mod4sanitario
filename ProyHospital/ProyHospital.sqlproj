@@ -66,5 +66,7 @@
     <Build Include="Schema\MedicoServicio.sql" />
     <Build Include="Schema\Paciente.sql" />
     <Build Include="Schema\HistoriaClinica.sql" />
+    <Build Include="Schema\VisitaMedica.sql" />
+    <Build Include="Schema\Internacion.sql" />
   </ItemGroup>
 </Project>
