@@ -1,0 +1,16 @@
+C:\Users\Maria\source\repos\ProyectoMod4\SanitarioOLTP\bin\Debug\SanitarioOLTP.dacpac
+C:\Users\Maria\source\repos\ProyectoMod4\SanitarioOLTP\bin\Debug\SanitarioOLTP.dll
+C:\Users\Maria\source\repos\ProyectoMod4\SanitarioOLTP\bin\Debug\SanitarioOLTP.pdb
+C:\Users\Maria\source\repos\ProyectoMod4\SanitarioOLTP\obj\Debug\SanitarioOLTP.sqlproj.AssemblyReference.cache
+C:\Users\Maria\source\repos\ProyectoMod4\SanitarioOLTP\obj\Debug\Model.xml
+C:\Users\Maria\source\repos\ProyectoMod4\SanitarioOLTP\obj\Debug\refactor.xml
+C:\Users\Maria\source\repos\ProyectoMod4\SanitarioOLTP\obj\Debug\postdeploy.sql
+C:\Users\Maria\source\repos\ProyectoMod4\SanitarioOLTP\obj\Debug\predeploy.sql
+C:\Users\Maria\source\repos\ProyectoMod4\SanitarioOLTP\obj\Debug\SanitarioOLTP.dll
+C:\Users\Maria\source\repos\ProyectoMod4\SanitarioOLTP\obj\Debug\SanitarioOLTP.pdb
+C:\proyecto\mod4sanitario\ProyectoMod4\SanitarioOLTP\bin\Debug\SanitarioOLTP.dacpac
+C:\proyecto\mod4sanitario\ProyectoMod4\SanitarioOLTP\bin\Debug\SanitarioOLTP.dll
+C:\proyecto\mod4sanitario\ProyectoMod4\SanitarioOLTP\bin\Debug\SanitarioOLTP.pdb
+C:\proyecto\mod4sanitario\ProyectoMod4\SanitarioOLTP\obj\Debug\SanitarioOLTP.sqlproj.AssemblyReference.cache
+C:\proyecto\mod4sanitario\ProyectoMod4\SanitarioOLTP\obj\Debug\SanitarioOLTP.dll
+C:\proyecto\mod4sanitario\ProyectoMod4\SanitarioOLTP\obj\Debug\SanitarioOLTP.pdb
