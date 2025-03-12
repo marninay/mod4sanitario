@@ -70,6 +70,8 @@
     <Build Include="Schema\Programmability\GetMedicoChangesByRowVersion.sql" />
     <Build Include="Schema\Programmability\GetPacienteChangesByRowVersion.sql" />
     <Build Include="Schema\Programmability\GetServicioChangesByRowVersion.sql" />
+    <Build Include="Schema\Programmability\GetVisitaMedicaChangesByRowVersion.sql" />
+    <Build Include="Schema\Programmability\GetInternacionChangesByRowVersion.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Schema\Tables\Hospital.sql" />
@@ -79,5 +81,11 @@
     <Build Include="Schema\Tables\MedicoServicio.sql" />
     <Build Include="Schema\Tables\Paciente.sql" />
     <Build Include="Schema\Tables\Servicio.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\clean.data.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,43 @@
+﻿** Aspectos destacados
+     Tablas que se volverán a crear con los datos migrados
+       Ninguno
+     Índices clúster que se van a quitar
+       Ninguno
+     Índices clúster que se van a crear
+       Ninguno
+     Posibles incidencias de datos
+       Ninguno
+
+** Acciones del usuario
+     Crear
+       [dbo].[HistoriaClinica] (Tabla)
+       [dbo].[Hospital] (Tabla)
+       [dbo].[HospitalServicio] (Tabla)
+       [dbo].[Internacion] (Tabla)
+       [dbo].[Medico] (Tabla)
+       [dbo].[MedicoServicio] (Tabla)
+       [dbo].[Paciente] (Tabla)
+       [dbo].[Servicio] (Tabla)
+       [dbo].[VisitaMedica] (Tabla)
+       [dbo].[FK_HistoriaClinica_Paciente] (Clave externa)
+       [dbo].[FK_HospServicio_Hosp] (Clave externa)
+       [dbo].[FK_HospServcio_Serv] (Clave externa)
+       [dbo].[FK_Internacion_VisitaMedica] (Clave externa)
+       [dbo].[FK_Medico] (Clave externa)
+       [dbo].[FK_MedicoServicio_Medico] (Clave externa)
+       [dbo].[FK_MedicoServicio_Servicio] (Clave externa)
+       [dbo].[FK_MedicoServicio_Hospital] (Clave externa)
+       [dbo].[FK_VisitaMedica_Hospital] (Clave externa)
+       [dbo].[FK_VisitaMedica_Servicio] (Clave externa)
+       [dbo].[FK_VisitaMedica_Medico] (Clave externa)
+       [dbo].[FK_VisitaMedica_HistoriaClinica] (Clave externa)
+       [dbo].[GetDatabaseRowVersion] (Procedimiento)
+       [dbo].[GetHospitalChangesByRowVersion] (Procedimiento)
+       [dbo].[GetMedicoChangesByRowVersion] (Procedimiento)
+       [dbo].[GetPacienteChangesByRowVersion] (Procedimiento)
+       [dbo].[GetServicioChangesByRowVersion] (Procedimiento)
+
+** Acciones de compatibilidad
+
+Las bases de datos del proyecto y de destino tienen una configuración de intercalación diferente. Se pueden producir errores de implementación.
+

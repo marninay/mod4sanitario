@@ -1,0 +1,41 @@
+﻿DELETE FROM Internacion;
+GO
+DBCC CHECKIDENT ('Internacion', RESEED);
+GO
+
+DELETE FROM VisitaMedica;
+GO
+DBCC CHECKIDENT ('VisitaMedica', RESEED);
+GO
+
+DELETE FROM HistoriaClinica;
+GO
+DBCC CHECKIDENT ('HistoriaClinica', RESEED);
+GO
+
+DELETE FROM Paciente;
+GO
+DBCC CHECKIDENT ('Paciente', RESEED);
+GO
+
+DELETE FROM MedicoServicio;
+GO
+
+DELETE FROM HospitalServicio;
+GO
+
+
+DELETE FROM Servicio;
+GO
+DBCC CHECKIDENT ('Servicio', RESEED);
+GO
+
+DELETE FROM Medico;
+GO
+DBCC CHECKIDENT ('Medico', RESEED);
+GO
+
+DELETE FROM Hospital;
+GO
+DBCC CHECKIDENT ('Hospital', RESEED);
+GO

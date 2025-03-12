@@ -1,0 +1,40 @@
+﻿** Aspectos destacados
+     Tablas que se volverán a crear con los datos migrados
+       Ninguno
+     Índices clúster que se van a quitar
+       Ninguno
+     Índices clúster que se van a crear
+       Ninguno
+     Posibles incidencias de datos
+       Ninguno
+
+** Acciones del usuario
+     Crear
+       [dbo].[DIMDate] (Tabla)
+       [dbo].[DIMHospital] (Tabla)
+       [dbo].[DIMMedico] (Tabla)
+       [dbo].[DIMPaciente] (Tabla)
+       [dbo].[DIMServicio] (Tabla)
+       [dbo].[FactInternaciones] (Tabla)
+       [dbo].[FactVisitasMedicas] (Tabla)
+       [dbo].[PackageConfig] (Tabla)
+       [dbo].[stagingHospital] (Tabla)
+       [dbo].[stagingMedico] (Tabla)
+       [dbo].[stagingPaciente] (Tabla)
+       [dbo].[stagingServicio] (Tabla)
+       [dbo].[FK_DIMMedico_DIMHospital] (Clave externa)
+       [dbo].[FK_FactInternaciones_FactVisitasMedicas] (Clave externa)
+       [dbo].[FK_FactInternaciones_DimHospital] (Clave externa)
+       [dbo].[FK_FactInternaciones_DimPaciente] (Clave externa)
+       [dbo].[FK_FactInternaciones_DimTiempo_TiempoIngreso] (Clave externa)
+       [dbo].[FK_FactInternaciones_DimTiempo_TiempoSalida] (Clave externa)
+       [dbo].[FK_FactVisitasMedicas_DIMHospital] (Clave externa)
+       [dbo].[FK_FactVisitasMedicas_DimServicio] (Clave externa)
+       [dbo].[FK_FactVisitasMedicas_DimMedico] (Clave externa)
+       [dbo].[FK_FactVisitasMedicas_DimPaciente] (Clave externa)
+       [dbo].[FK_FactVisitasMedicas_DimDate] (Clave externa)
+
+** Acciones de compatibilidad
+
+Las bases de datos del proyecto y de destino tienen una configuración de intercalación diferente. Se pueden producir errores de implementación.
+

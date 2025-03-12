@@ -901,6 +901,440 @@
 				</Entry>
 			</Relationship>
 		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[DW_MergeDimHospital]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	UPDATE dh
+	SET [nombre]=sh.[nombre],
+		[ciudad]=sh.[ciudad],
+		[telefono]=sh.[telefono],
+		[codDirector]=sh.[codDirector] 
+	FROM [dbo].[DIMHospital]    dh
+	INNER JOIN stagingHospital sh ON (dh.[HospitalSK] =sh.[HospitalSK])
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[DIMHospital]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingHospital]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DIMHospital].[HospitalSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingHospital].[HospitalSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DIMHospital].[nombre]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingHospital].[nombre]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DIMHospital].[ciudad]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingHospital].[ciudad]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DIMHospital].[telefono]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingHospital].[telefono]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DIMHospital].[codDirector]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingHospital].[codDirector]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="292" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[DW_MergeDimHospital]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[DW_MergeDimInternacion]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+UPDATE di
+	SET 
+
+    VisitaKey =si.VisitaSK,
+    HospitalSK =si.HospitalSK,
+    PacienteSK =si.PacienteSK,
+    TiempoIngresoKey= si.TiempoIngresoKey,
+    TiempoSalidaKey =si.TiempoSalidaKey,
+    codInternacion=si.codInternacion,
+    numHabitacion=si.numHabitacion,
+    numCama=si.numCama
+	FROM [dbo].[FactInternaciones] di
+	INNER JOIN stagingInternacion si ON (di.[InternacionKey] =si.[InternacionKey])]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[FactInternaciones]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingInternacion]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FactInternaciones].[InternacionKey]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingInternacion].[InternacionKey]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FactInternaciones].[VisitaKey]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingInternacion].[VisitaSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FactInternaciones].[HospitalSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingInternacion].[HospitalSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FactInternaciones].[PacienteSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingInternacion].[PacienteSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FactInternaciones].[TiempoIngresoKey]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingInternacion].[TiempoIngresoKey]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FactInternaciones].[TiempoSalidaKey]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingInternacion].[TiempoSalidaKey]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FactInternaciones].[codInternacion]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingInternacion].[codInternacion]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FactInternaciones].[numHabitacion]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingInternacion].[numHabitacion]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FactInternaciones].[numCama]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingInternacion].[numCama]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="469" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[DW_MergeDimInternacion]&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[DW_MergeDimMedico]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	UPDATE dm
+	SET [DNI]=sm.[DNI],
+		[apellidosnombre]=sm.[apellidosnombre],
+		[fechaNacimiento]=sm.[fechaNacimiento],
+        [HospitalSK]=[HospitalSK]
+	FROM [dbo].[DIMMedico]    dm
+	INNER JOIN stagingMedico sm ON (dm.[MedicoSK] =sm.[MedicoSK])
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[DIMMedico]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingMedico]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DIMMedico].[MedicoSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingMedico].[MedicoSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DIMMedico].[DNI]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingMedico].[DNI]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DIMMedico].[apellidosnombre]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingMedico].[apellidosnombre]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DIMMedico].[fechaNacimiento]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingMedico].[fechaNacimiento]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DIMMedico].[HospitalSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DIMMedico].[HospitalSK]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="308" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[DW_MergeDimMedico]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[DW_MergeDimPaciente]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	UPDATE dp
+	SET [DNI]=sp.[DNI],
+		[apellidosnombre]=sp.[apellidosnombre],
+		[fechaNacimiento]=sp.[fechaNacimiento],
+		[numSS]=sp.[numSS],
+		[datosOpcionales]=sp.[datosOpcionales]
+	FROM [dbo].[DIMPaciente]    dp
+	INNER JOIN stagingPaciente sp ON (dp.[PacienteSK] =sp.[PacienteSK])
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[DIMPaciente]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingPaciente]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DIMPaciente].[PacienteSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingPaciente].[PacienteSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DIMPaciente].[DNI]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingPaciente].[DNI]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DIMPaciente].[apellidosnombre]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingPaciente].[apellidosnombre]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DIMPaciente].[fechaNacimiento]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingPaciente].[fechaNacimiento]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DIMPaciente].[numSS]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingPaciente].[numSS]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DIMPaciente].[datosOpcionales]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingPaciente].[datosOpcionales]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="348" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[DW_MergeDimPaciente]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[DW_MergeDimServicio]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	UPDATE ds
+	SET [nombre]=ss.[nombre],
+		[comentario]=ss.[comentario]
+
+	FROM [dbo].[DIMServicio]    ds
+	INNER JOIN stagingServicio ss ON (ds.[ServicioSK] =ss.[ServicioSK])
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[DIMServicio]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingServicio]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DIMServicio].[ServicioSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingServicio].[ServicioSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DIMServicio].[nombre]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingServicio].[nombre]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DIMServicio].[comentario]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingServicio].[comentario]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="237" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[DW_MergeDimServicio]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[DW_MergeDimVisitasMedicas]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+UPDATE dvm
+	SET 
+    HospitalSK=svm.HospitalSK,
+    ServicioSK = svm.ServicioSK,
+    MedicoSK=svm.MedicoSK,
+    PacienteSK=svm.PacienteSK,
+    DateKey=svm.DateKey,
+    codVisita =svm.codVisita,
+    diagnostico=svm.diagnostico,
+    tratamiento =svm.tratamiento
+
+	FROM [dbo].[FactVisitasMedicas]    dvm
+	INNER JOIN stagingVisitasMedicas svm ON (dvm.[VisitaKey] =svm.[VisitaKey])]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[FactVisitasMedicas]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingVisitasMedicas]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FactVisitasMedicas].[VisitaKey]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingVisitasMedicas].[VisitaKey]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FactVisitasMedicas].[HospitalSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingVisitasMedicas].[HospitalSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FactVisitasMedicas].[ServicioSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingVisitasMedicas].[ServicioSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FactVisitasMedicas].[MedicoSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingVisitasMedicas].[MedicoSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FactVisitasMedicas].[PacienteSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingVisitasMedicas].[PacienteSK]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FactVisitasMedicas].[DateKey]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingVisitasMedicas].[DateKey]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FactVisitasMedicas].[codVisita]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingVisitasMedicas].[codVisita]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FactVisitasMedicas].[diagnostico]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingVisitasMedicas].[diagnostico]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FactVisitasMedicas].[tratamiento]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stagingVisitasMedicas].[tratamiento]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="446" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[DW_MergeDimVisitasMedicas]&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
 		<Element Type="SqlTable" Name="[dbo].[FactInternaciones]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="Columns">
@@ -1464,6 +1898,60 @@
 			</Relationship>
 			<AttachedAnnotation Disambiguator="23" />
 		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetLastPackageRowVersion]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+  BEGIN
+	SELECT LastRowVersion
+	FROM [dbo].[PackageConfig]
+	WHERE TableName = @tableName;
+  END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[PackageConfig]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PackageConfig].[LastRowVersion]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PackageConfig].[TableName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetLastPackageRowVersion].[@tableName]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetLastPackageRowVersion].[@tableName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="187" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[GetLastPackageRowVersion]&#xD;&#xA;(&#xD;&#xA;&#x9;@tableName VARCHAR(50)&#xD;&#xA;)&#xD;&#xA;  AS" />
+			</Annotation>
+		</Element>
 		<Element Type="SqlTable" Name="[dbo].[PackageConfig]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="Columns">
@@ -1632,6 +2120,152 @@
 				</Entry>
 				<Entry>
 					<Element Type="SqlSimpleColumn" Name="[dbo].[stagingHospital].[codDirector]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[stagingInternacion]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[stagingInternacion].[InternacionKey]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[stagingInternacion].[VisitaSK]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[stagingInternacion].[HospitalSK]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[stagingInternacion].[PacienteSK]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[stagingInternacion].[TiempoIngresoKey]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[stagingInternacion].[TiempoSalidaKey]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[stagingInternacion].[codInternacion]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[stagingInternacion].[numHabitacion]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[stagingInternacion].[numCama]">
 						<Relationship Name="TypeSpecifier">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -1909,6 +2543,226 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[stagingVisitasMedicas]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[stagingVisitasMedicas].[VisitaKey]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[stagingVisitasMedicas].[HospitalSK]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[stagingVisitasMedicas].[ServicioSK]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[stagingVisitasMedicas].[MedicoSK]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[stagingVisitasMedicas].[PacienteSK]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[stagingVisitasMedicas].[DateKey]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[stagingVisitasMedicas].[codVisita]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[stagingVisitasMedicas].[diagnostico]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[stagingVisitasMedicas].[tratamiento]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UpdateLastPackageRowVersion]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+  BEGIN
+	UPDATE [dbo].[PackageConfig]
+	SET LastRowVersion = @lastRowVersion
+	WHERE TableName = @tableName;
+  END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[PackageConfig]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PackageConfig].[LastRowVersion]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateLastPackageRowVersion].[@lastRowVersion]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PackageConfig].[TableName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateLastPackageRowVersion].[@tableName]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateLastPackageRowVersion].[@tableName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateLastPackageRowVersion].[@lastRowVersion]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bigint]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="237" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateLastPackageRowVersion]&#xD;&#xA;  (&#xD;&#xA;&#x9;@tableName VARCHAR(50)&#xD;&#xA;&#x9;,@lastRowVersion BIGINT&#xD;&#xA;  )&#xD;&#xA;  AS" />
+			</Annotation>
 		</Element>
 	</Model>
 </DataSchemaModel>
