@@ -1,12 +1,36 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\proyecto\\mod4sanitario\\ProyHospital\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\mod4sanitario-main\\ProyHospital\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\mod4sanitario-main\\ProyHospitalDW\\ProyHospitalDW.sqlproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProyHospitalDW.sqlproj",
+              "DocumentMoniker": "D:\\mod4sanitario-main\\ProyHospitalDW\\ProyHospitalDW.sqlproj",
+              "RelativeDocumentMoniker": "..\\ProyHospitalDW\\ProyHospitalDW.sqlproj",
+              "ToolTip": "D:\\mod4sanitario-main\\ProyHospitalDW\\ProyHospitalDW.sqlproj",
+              "RelativeToolTip": "..\\ProyHospitalDW\\ProyHospitalDW.sqlproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000827|",
+              "WhenOpened": "2025-03-19T13:18:31.671Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

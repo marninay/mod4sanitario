@@ -1,0 +1,26 @@
+﻿** Highlights
+     Tables that will be recreated with data migrated
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Dim_Hospital] (Table)
+       [dbo].[Dim_Medico] (Table)
+       [dbo].[Dim_Paciente] (Table)
+       [dbo].[Dim_Servicio] (Table)
+       [dbo].[Dim_Tiempo] (Table)
+       [dbo].[Hecho_Atencion_Medica] (Table)
+       Foreign Key: unnamed constraint on [dbo].[Dim_Medico] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Hecho_Atencion_Medica] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Hecho_Atencion_Medica] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Hecho_Atencion_Medica] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Hecho_Atencion_Medica] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Hecho_Atencion_Medica] (Foreign Key)
+
+** Supporting actions
